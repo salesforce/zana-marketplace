@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/salesforce/zana-marketplace/security/advisories/new
+    about: Report security issues privately. Do not file them as public GitHub issues.
+  - name: Zana bug
+    url: https://github.com/salesforce/zana/issues/new?template=bug.yml
+    about: Report problems with the Zana app itself in the Zana repository.
