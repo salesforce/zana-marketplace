@@ -17,8 +17,9 @@ reports are welcome.
 ## Submitting a Plugin
 
 1. Fork the repository and create a focused branch from `main`.
-2. Add one listing for your plugin. Point its source at a public git repository
-   or a published npm package. Do not add plugin code to this repository.
+2. Add one listing to the `plugins` array in root `marketplace.json` (Zana
+   catalog schema version 1). Keep the entry ID equal to the installed plugin
+   ID. Point its source at a public git repository or a published npm package. Do not add plugin code to this repository.
 3. Check that the plugin installs and runs in a current Zana build.
 4. Open a pull request against `main`. Describe what the plugin does, the
    permissions it requests, and how you tested it.

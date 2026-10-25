@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "name": "zana-community",
+  "displayName": "Zana Community",
+  "description": "Public plugins contributed by the Zana community.",
+  "plugins": [
+    {
+      "id": "orgo-machines-6758",
+      "displayName": "Orgo Machines",
+      "description": "Connect Orgo Linux computers to Zana with automatic SSH setup, and manage their power state from one panel.",
+      "overview": "Connect a running Orgo Linux computer to Zana from the sidebar. The plugin prepares a dedicated SSH key, updates its managed SSH configuration, and pairs the machine through Zana. Reconnect refreshes changed endpoints and reuses existing enrollments.\n\nBrowse computers across Orgo workspaces, filter the list, inspect SSH details, and start, stop, restart, suspend or resume computers when supported. Destructive power actions ask for confirmation.\n\nRequires Zana desktop on macOS or Linux, an Orgo account with API access, and a running Linux Orgo computer for pairing. Orgo subscription and usage charges apply separately. Configure the API key in the private local credential file described in the repository README.\n\nInstalled plugins execute as full-trust code in the Zana server process. This plugin contacts Orgo over HTTPS and writes its dedicated SSH identity and managed configuration locally. It preserves existing SSH keys and does not receive host-daemon tokens.",
+      "icon": {
+        "lucide": "Monitor"
+      },
+      "tags": [
+        "orgo",
+        "cloud",
+        "remote-machines",
+        "ssh"
+      ],
+      "author": {
+        "name": "grebmann1",
+        "github": "grebmann1",
+        "url": "https://github.com/grebmann1"
+      },
+      "source": {
+        "git": {
+          "url": "https://github.com/grebmann1/zana-orgo-machines.git",
+          "ref": "v0.2.0"
+        }
+      }
+    }
+  ]
+}

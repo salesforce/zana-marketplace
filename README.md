@@ -9,10 +9,16 @@ the catalog never runs plugin code.
 
 ## Install a plugin
 
-In Zana, open **Plugins** and browse the marketplace. From a terminal:
+Register this community catalog once, then browse it in **Plugins**:
 
 ```bash
-zcc marketplace install <plugin-id>@<marketplace>
+zcc marketplace add git:https://github.com/salesforce/zana-marketplace.git
+```
+
+From a terminal, install a listed plugin with:
+
+```bash
+zcc marketplace install orgo-machines-6758@zana-community
 ```
 
 ## Submit a plugin
