@@ -20,7 +20,7 @@ reports are welcome.
 2. Add `entries/<plugin-id>.json`. Keep the file stem and entry ID equal to the
    installed plugin ID. Point its source at a public git repository or a
    published npm package. Do not add plugin code to this repository. The
-   [publishing guide](https://salesforce.github.io/zana-marketplace/publish/)
+   [publishing guide](https://opensource.salesforce.com/zana-marketplace/publish/)
    includes an example and field reference.
 3. Check that the plugin installs and runs in a current Zana build.
 4. Run `npm ci`, `npm run build`, `npm test` and `npm run check`. Commit the entry,

@@ -134,7 +134,7 @@ describe('renderIndexPage', () => {
     assert.match(html, /placeholder="Search 7 plugins"/);
     assert.match(html, /<h2>Featured <span class="count">1<\/span>/);
     assert.match(html, /<h2>New &amp; notable <span class="count">2<\/span>/);
-    assert.match(html, /id="tools"[\s\S]*?Tools <span class="count">4<\/span>[\s\S]*?href="\?category=tools">View all/);
+    assert.match(html, /id="category-tools"[\s\S]*?Tools <span class="count">4<\/span>[\s\S]*?href="\?category=tools">View all/);
     assert.doesNotMatch(html, /href="\?category=work-tracking">View all/);
     assert.match(html, /<option value="more-plugins">More plugins \(1\)<\/option>/);
     assert.match(html, /id="results" hidden/);
@@ -161,6 +161,12 @@ describe('renderIndexPage', () => {
     const html = renderIndexPage(base, []);
     assert.match(html, /No plugins yet/);
     assert.doesNotMatch(html, /id="q"|id="category"/);
+  });
+
+  it('keeps category section ids separate from search UI ids', () => {
+    const html = renderIndexPage(base, [entry('results-plugin', { site: { category: 'Results' } })]);
+    assert.match(html, /id="category-results"/);
+    assert.equal([...html.matchAll(/id="results"/g)].length, 1);
   });
 });
 

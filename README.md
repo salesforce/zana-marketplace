@@ -2,7 +2,7 @@
 
 The public plugin marketplace for [Zana](https://github.com/salesforce/zana).
 
-**Browse plugins:** <https://salesforce.github.io/zana-marketplace/>
+**Browse plugins:** <https://opensource.salesforce.com/zana-marketplace/>
 
 This repository is a catalog of listings. Each listing points to a plugin's
 source (a git repository or an npm package). Zana fetches the catalog to show
@@ -28,7 +28,7 @@ zcc marketplace install orgo-machines-6758@zana-community
 Open a pull request that adds a listing for your plugin. The plugin's code stays
 in your own repository. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-The [publishing guide](https://salesforce.github.io/zana-marketplace/publish/)
+The [publishing guide](https://opensource.salesforce.com/zana-marketplace/publish/)
 includes an example entry and a pre-filled GitHub submission link.
 
 ## Catalog and website

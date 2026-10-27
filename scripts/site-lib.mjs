@@ -7,7 +7,7 @@
 
 export const REPO_URL = 'https://github.com/salesforce/zana-marketplace';
 export const MARKETPLACE_SOURCE = 'git:https://github.com/salesforce/zana-marketplace.git';
-export const PAGES_URL = 'https://salesforce.github.io/zana-marketplace/';
+export const PAGES_URL = 'https://opensource.salesforce.com/zana-marketplace/';
 export const UNCATEGORIZED = 'More plugins';
 
 /** Top-level paths the site owns; a plugin id cannot shadow them. */
@@ -200,7 +200,7 @@ export function renderIndexPage(base, plugins) {
     const more = group.plugins.length > SECTION_PREVIEW;
     sections.push(
       section({
-        id: group.slug,
+        id: `category-${group.slug}`,
         title: group.name,
         count: group.plugins.length,
         viewAll: more ? `?category=${group.slug}` : null,

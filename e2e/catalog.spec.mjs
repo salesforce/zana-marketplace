@@ -7,10 +7,10 @@ test('search, empty state, category, sort and URL state work under the Pages pre
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('./');
   await expect(page.getByRole('heading', { name: 'Make Zana yours' })).toBeVisible();
-  await page.getByRole('searchbox', { name: 'Search plugins' }).fill('orgo');
-  await expect(page.locator('#results .card')).toHaveCount(1);
-  await expect(page.locator('#results .card')).toBeVisible();
-  await expect(page).toHaveURL(/q=orgo/);
+  await page.getByRole('searchbox', { name: 'Search plugins' }).fill('orgo-machines-6758');
+  await expect(page.locator('#results .card[href="./orgo-machines-6758/"]')).toHaveCount(1);
+  await expect(page.locator('#results .card[href="./orgo-machines-6758/"]')).toBeVisible();
+  await expect(page).toHaveURL(/q=orgo-machines-6758/);
   await page.getByRole('searchbox').fill('no-such-plugin');
   await expect(page.getByText('No plugin matches your search.')).toBeVisible();
   await page.getByRole('link', { name: 'Clear filters' }).click();
@@ -20,13 +20,14 @@ test('search, empty state, category, sort and URL state work under the Pages pre
   await page.reload();
   await expect(page.getByRole('combobox')).toHaveValue('remote-machines');
   await expect(page.getByRole('button', { name: 'A–Z' })).toHaveAttribute('aria-pressed', 'true');
-  await expect(page.locator('#results .card')).toBeVisible();
+  await expect(page.locator('#results .card[href="./orgo-machines-6758/"]')).toBeVisible();
   expect(errors).toEqual([]);
 });
 
 test('plugin details, source, install command and publish guide stay on public destinations', async ({ page }) => {
   await page.goto('./');
-  await page.locator('#sections .card').click();
+  await page.getByRole('searchbox').fill('orgo-machines-6758');
+  await page.locator('#results .card[href="./orgo-machines-6758/"]').click();
   await expect(page).toHaveURL(/\/zana-marketplace\/orgo-machines-6758\/$/);
   await expect(page.getByRole('heading', { name: 'Orgo Machines', exact: true })).toBeVisible();
   await expect(page.locator('.install code')).toContainText(install);
@@ -75,7 +76,7 @@ test('the catalog remains browsable without JavaScript', async ({ browser }) => 
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
   await page.goto('http://127.0.0.1:4180/zana-marketplace/');
-  await page.locator('#sections .card').click();
+  await page.locator('#sections .card[href="./orgo-machines-6758/"]').click();
   await expect(page.locator('.install code')).toContainText(install);
   await context.close();
 });
@@ -86,5 +87,5 @@ test('keyboard shortcut focuses search', async ({ page, isMobile }) => {
   await page.keyboard.press('/');
   await expect(page.getByRole('searchbox')).toBeFocused();
   await page.keyboard.type('ssh');
-  await expect(page.locator('#results .card')).toBeVisible();
+  await expect(page.locator('#results .card[href="./orgo-machines-6758/"]')).toBeVisible();
 });
