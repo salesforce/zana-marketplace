@@ -11,6 +11,7 @@
 - [ ] The plugin installs from this listing in a current Zana build
 - [ ] The description and requirements match what the plugin does
 - [ ] I own this plugin or have permission to list it
+- [ ] `npm run build`, `npm test` and `npm run check` pass; generated files are included
 
 ## Notes for reviewers
 
