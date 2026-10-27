@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Publish a plugin — Zana Community</title>
+
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="../"><img class="logo" src="../assets/logo.svg" alt="" width="28" height="28" />Zana <span class="muted">community plugins</span></a>
+  <nav>
+    <a href="../">Plugins</a>
+    <a href="https://github.com/salesforce/zana-marketplace">Repository</a>
+    <a class="btn btn-dark" href="../publish/">Publish a plugin</a>
+  </nav>
+</div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<main class="wrap" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Marketplace</a><span>/</span><span>Publish a plugin</span></nav>
+<section class="hero hero-left">
+  <h1>Publish a community plugin</h1>
+  <p class="lede">List your plugin with one pull request. The catalog stores only a pointer to your source, and nothing runs until someone installs it.</p>
+</section>
+
+<ol class="steps">
+  <li><h3>Host your plugin publicly</h3><p class="muted">Push your plugin to a public git repository or publish it to npm. Tag releases so the entry can pin a <code>ref</code>. New to plugins? Start with <code>zcc plugin new &lt;name&gt;</code>.</p></li>
+  <li><h3>Add your entry</h3><p class="muted">Create <code>entries/&lt;plugin-id&gt;.json</code> in the marketplace repository. Fork the repository first. The button opens a pre-filled file on GitHub; propose it on a branch to start a pull request.</p>
+    <p><a class="btn btn-dark" href="https://github.com/salesforce/zana-marketplace/new/main/entries?filename=my-plugin.json&amp;value=%7B%0A%20%20%22id%22%3A%20%22my-plugin%22%2C%0A%20%20%22displayName%22%3A%20%22My%20plugin%22%2C%0A%20%20%22description%22%3A%20%22One%20sentence%20shown%20on%20the%20catalog%20card.%22%2C%0A%20%20%22overview%22%3A%20%22A%20longer%20explanation%20for%20the%20plugin%20page%3A%20what%20it%20does%2C%20what%20it%20needs%20(CLIs%2C%20org%20aliases%2C%20permissions)%20and%20any%20caveats.%22%2C%0A%20%20%22icon%22%3A%20%7B%0A%20%20%20%20%22lucide%22%3A%20%22Puzzle%22%0A%20%20%7D%2C%0A%20%20%22tags%22%3A%20%5B%0A%20%20%20%20%22developer-tools%22%0A%20%20%5D%2C%0A%20%20%22author%22%3A%20%7B%0A%20%20%20%20%22name%22%3A%20%22Your%20name%20or%20team%22%2C%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgithub.com%2Fyour-name%22%0A%20%20%7D%2C%0A%20%20%22source%22%3A%20%7B%0A%20%20%20%20%22git%22%3A%20%7B%0A%20%20%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgithub.com%2Fyour-name%2Fzcc-plugin-my-plugin.git%22%2C%0A%20%20%20%20%20%20%22ref%22%3A%20%22v1.0.0%22%0A%20%20%20%20%7D%0A%20%20%7D%2C%0A%20%20%22site%22%3A%20%7B%0A%20%20%20%20%22category%22%3A%20%22Developer%20Tools%22%2C%0A%20%20%20%20%22addedAt%22%3A%20%222026-01-31%22%0A%20%20%7D%0A%7D%0A">Create entry on GitHub</a> <a class="btn" href="https://github.com/salesforce/zana-marketplace">Open repository</a></p></li>
+  <li><h3>Build and open the pull request</h3><p class="muted">From a clone of the repository, regenerate the manifest and this website, then commit everything together:</p>
+    <div class="cmd"><code><span class="prompt">$</span>npm ci &amp;&amp; npm run build &amp;&amp; npm test &amp;&amp; git add entries marketplace.json docs</code><button type="button" class="copy" data-copy="npm ci &amp;&amp; npm run build &amp;&amp; npm test &amp;&amp; git add entries marketplace.json docs">Copy</button></div>
+    <p class="muted">Once it merges, your plugin appears here and in Zana's Browse view on the next catalog refresh.</p></li>
+</ol>
+
+<section class="section">
+  <div class="section-head"><div><h2>Example entry</h2><p class="muted">The <code>site</code> block is for this website only and is removed from <code>marketplace.json</code>.</p></div><button type="button" class="copy view-all" data-copy="{
+  &quot;id&quot;: &quot;my-plugin&quot;,
+  &quot;displayName&quot;: &quot;My plugin&quot;,
+  &quot;description&quot;: &quot;One sentence shown on the catalog card.&quot;,
+  &quot;overview&quot;: &quot;A longer explanation for the plugin page: what it does, what it needs (CLIs, org aliases, permissions) and any caveats.&quot;,
+  &quot;icon&quot;: {
+    &quot;lucide&quot;: &quot;Puzzle&quot;
+  },
+  &quot;tags&quot;: [
+    &quot;developer-tools&quot;
+  ],
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;Your name or team&quot;,
+    &quot;url&quot;: &quot;https://github.com/your-name&quot;
+  },
+  &quot;source&quot;: {
+    &quot;git&quot;: {
+      &quot;url&quot;: &quot;https://github.com/your-name/zcc-plugin-my-plugin.git&quot;,
+      &quot;ref&quot;: &quot;v1.0.0&quot;
+    }
+  },
+  &quot;site&quot;: {
+    &quot;category&quot;: &quot;Developer Tools&quot;,
+    &quot;addedAt&quot;: &quot;2026-01-31&quot;
+  }
+}
+">Copy</button></div>
+  <pre class="code">{
+  &quot;id&quot;: &quot;my-plugin&quot;,
+  &quot;displayName&quot;: &quot;My plugin&quot;,
+  &quot;description&quot;: &quot;One sentence shown on the catalog card.&quot;,
+  &quot;overview&quot;: &quot;A longer explanation for the plugin page: what it does, what it needs (CLIs, org aliases, permissions) and any caveats.&quot;,
+  &quot;icon&quot;: {
+    &quot;lucide&quot;: &quot;Puzzle&quot;
+  },
+  &quot;tags&quot;: [
+    &quot;developer-tools&quot;
+  ],
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;Your name or team&quot;,
+    &quot;url&quot;: &quot;https://github.com/your-name&quot;
+  },
+  &quot;source&quot;: {
+    &quot;git&quot;: {
+      &quot;url&quot;: &quot;https://github.com/your-name/zcc-plugin-my-plugin.git&quot;,
+      &quot;ref&quot;: &quot;v1.0.0&quot;
+    }
+  },
+  &quot;site&quot;: {
+    &quot;category&quot;: &quot;Developer Tools&quot;,
+    &quot;addedAt&quot;: &quot;2026-01-31&quot;
+  }
+}
+</pre>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><h2>Fields</h2></div></div>
+  <div class="table-wrap"><table><thead><tr><th>Field</th><th>Requirement</th><th>Meaning</th></tr></thead><tbody><tr><td><code>id</code></td><td><span class="pill pill-required">Required</span></td><td>Slug (a–z, 0–9, -). Must equal the file name stem.</td></tr><tr><td><code>displayName</code></td><td><span class="pill pill-required">Required</span></td><td>Name on the card and plugin page.</td></tr><tr><td><code>description</code></td><td><span class="pill pill-required">Required</span></td><td>One sentence for the card.</td></tr><tr><td><code>author.name</code></td><td><span class="pill pill-required">Required</span></td><td>Team or person; add author.url to link it.</td></tr><tr><td><code>source.git / source.npm</code></td><td><span class="pill pill-required">Required</span></td><td>Where Zana installs from: a public git repository (url, optional subdir and ref) or a published npm package (package, range).</td></tr><tr><td><code>overview</code></td><td><span class="pill pill-optional">Optional</span></td><td>Longer text for the plugin page (max 4000 characters). Blank lines start new paragraphs.</td></tr><tr><td><code>tags, icon</code></td><td><span class="pill pill-optional">Optional</span></td><td>Search keywords; icon.url (https) is shown on the website.</td></tr><tr><td><code>site.category</code></td><td><span class="pill pill-website">Website</span></td><td>Groups the plugin on the website (max 40 characters). Defaults to &quot;More plugins&quot;.</td></tr><tr><td><code>site.addedAt</code></td><td><span class="pill pill-website">Website</span></td><td>YYYY-MM-DD; drives &quot;New &amp; notable&quot; and the New sort.</td></tr><tr><td><code>site.badge</code></td><td><span class="pill pill-website">Website</span></td><td>Short label next to the name, e.g. &quot;Beta&quot; (max 24 characters).</td></tr><tr><td><code>site.screenshots</code></td><td><span class="pill pill-website">Website</span></td><td>Up to 6 https image URLs for the plugin page.</td></tr><tr><td><code>site.featured</code></td><td><span class="pill pill-website">Website</span></td><td>Reserved for catalog maintainers.</td></tr></tbody></table></div>
+  <p class="muted small">Keep listings accurate and sources public. A listing is not an endorsement or a security audit. Each plugin keeps its own license.</p>
+</section>
+</main>
+<footer class="wrap footer">
+  <span>Public plugins built by the Zana community.</span>
+  <span><a href="../publish/">Publish a plugin</a> · <a href="https://github.com/salesforce/zana-marketplace">Repository</a> · <a href="https://github.com/salesforce/zana-marketplace/blob/main/marketplace.json">marketplace.json</a></span>
+</footer>
+<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+<script src="../assets/site.js"></script>
+</body>
+</html>

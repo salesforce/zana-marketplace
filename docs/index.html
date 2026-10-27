@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zana Community</title>
+<meta name="description" content="Public plugins contributed by the Zana community." />
+<link rel="icon" type="image/svg+xml" href="./assets/logo.svg" />
+<link rel="stylesheet" href="./assets/site.css" />
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="./"><img class="logo" src="./assets/logo.svg" alt="" width="28" height="28" />Zana <span class="muted">community plugins</span></a>
+  <nav>
+    <a href="./">Plugins</a>
+    <a href="https://github.com/salesforce/zana-marketplace">Repository</a>
+    <a class="btn btn-dark" href="./publish/">Publish a plugin</a>
+  </nav>
+</div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<main class="wrap" id="main">
+<section class="hero">
+  <h1>Make Zana yours</h1>
+  <p class="lede">Community plugins, installed with one command.</p>
+  <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="q" placeholder="Search 1 plugin" aria-label="Search plugins" autocomplete="off" /><kbd>/</kbd></label>
+</section>
+
+<section class="howto">
+  <div><strong>Install in Zana</strong><p class="muted">Find this catalog in Zana’s Plugins view. If it’s missing, add it once:</p></div>
+  <div class="cmd"><code><span class="prompt">$</span>zcc marketplace add git:https://github.com/salesforce/zana-marketplace.git</code><button type="button" class="copy" data-copy="zcc marketplace add git:https://github.com/salesforce/zana-marketplace.git">Copy</button></div>
+</section>
+
+<div class="toolbar">
+  <select id="category" aria-label="Category"><option value="">All categories</option><option value="remote-machines">Remote Machines (1)</option></select>
+  <div class="segmented" role="group" aria-label="Sort">
+    <button type="button" data-sort="featured" aria-pressed="true">Featured</button>
+    <button type="button" data-sort="new" aria-pressed="false">New</button>
+    <button type="button" data-sort="name" aria-pressed="false">A–Z</button>
+  </div>
+</div>
+
+<div id="sections">
+<section class="section" id="remote-machines">
+  <div class="section-head"><div><h2>Remote Machines <span class="count">1</span></h2></div></div>
+  <div class="grid"><a class="card" href="./orgo-machines-6758/" data-search="orgo-machines-6758 orgo machines connect orgo linux computers to zana with automatic ssh setup, and manage their power state from one panel. remote machines orgo cloud remote-machines ssh" data-category="remote-machines" data-name="orgo machines" data-added="2026-10-25" data-featured="0">
+  <div class="card-head"><span class="avatar" style="--hue:267" aria-hidden="true">O</span><h3>Orgo Machines</h3></div>
+  <p class="card-desc">Connect Orgo Linux computers to Zana with automatic SSH setup, and manage their power state from one panel.</p>
+  <div class="card-foot"><span class="author"><span class="author-dot">G</span>grebmann1</span><span>Remote Machines</span></div>
+</a></div>
+</section>
+</div>
+
+<section class="section" id="results" hidden>
+  <div class="section-head"><div><h2 id="results-title" aria-live="polite" aria-atomic="true">Plugins</h2></div><a class="view-all" href="./" id="clear">Clear filters</a></div>
+  <div class="grid" id="results-grid">
+<a class="card" href="./orgo-machines-6758/" data-search="orgo-machines-6758 orgo machines connect orgo linux computers to zana with automatic ssh setup, and manage their power state from one panel. remote machines orgo cloud remote-machines ssh" data-category="remote-machines" data-name="orgo machines" data-added="2026-10-25" data-featured="0">
+  <div class="card-head"><span class="avatar" style="--hue:267" aria-hidden="true">O</span><h3>Orgo Machines</h3></div>
+  <p class="card-desc">Connect Orgo Linux computers to Zana with automatic SSH setup, and manage their power state from one panel.</p>
+  <div class="card-foot"><span class="author"><span class="author-dot">G</span>grebmann1</span><span>Remote Machines</span></div>
+</a>
+  </div>
+  <p class="muted" id="no-match" hidden>No plugin matches your search.</p>
+</section>
+
+<section class="cta">
+  <div><h2>Built something useful for Zana?</h2><p class="muted">Share it with the community so everyone can install it with one command.</p></div>
+  <a class="btn btn-dark" href="./publish/">Publish a plugin</a>
+</section>
+</main>
+<footer class="wrap footer">
+  <span>Public plugins built by the Zana community.</span>
+  <span><a href="./publish/">Publish a plugin</a> · <a href="https://github.com/salesforce/zana-marketplace">Repository</a> · <a href="https://github.com/salesforce/zana-marketplace/blob/main/marketplace.json">marketplace.json</a></span>
+</footer>
+<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+<script src="./assets/site.js"></script>
+</body>
+</html>

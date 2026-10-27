@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Orgo Machines — Zana Community</title>
+<meta name="description" content="Connect Orgo Linux computers to Zana with automatic SSH setup, and manage their power state from one panel." />
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="../"><img class="logo" src="../assets/logo.svg" alt="" width="28" height="28" />Zana <span class="muted">community plugins</span></a>
+  <nav>
+    <a href="../">Plugins</a>
+    <a href="https://github.com/salesforce/zana-marketplace">Repository</a>
+    <a class="btn btn-dark" href="../publish/">Publish a plugin</a>
+  </nav>
+</div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<main class="wrap" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Marketplace</a><span>/</span><a href="../?category=remote-machines">Remote Machines</a><span>/</span><span>Orgo Machines</span></nav>
+
+<section class="detail-head">
+  <span class="avatar avatar-lg" style="--hue:267" aria-hidden="true">O</span>
+  <div>
+    <h1>Orgo Machines </h1>
+    <p class="meta"><span class="author"><span class="author-dot">G</span><a href="https://github.com/grebmann1">grebmann1</a></span><span>·</span><a href="../?category=remote-machines">Remote Machines</a><span>·</span><span>Added 2026-10-25</span></p>
+  </div>
+</section>
+
+<section class="install">
+  <div class="cmd cmd-lg"><code><span class="prompt">$</span>zcc marketplace install orgo-machines-6758@zana-community</code><button type="button" class="copy" data-copy="zcc marketplace install orgo-machines-6758@zana-community">Copy</button></div>
+  <a class="btn" href="https://github.com/grebmann1/zana-orgo-machines">View source</a>
+</section>
+<p class="muted small">Not listed in Zana yet? Run <code>zcc marketplace add git:https://github.com/salesforce/zana-marketplace.git</code> once.</p>
+
+
+
+<div class="detail-body">
+  <article class="prose">
+    <h2>Overview</h2>
+    <p class="lead">Connect Orgo Linux computers to Zana with automatic SSH setup, and manage their power state from one panel.</p>
+    <p>Connect a running Orgo Linux computer to Zana from the sidebar. The plugin prepares a dedicated SSH key, updates its managed SSH configuration, and pairs the machine through Zana. Reconnect refreshes changed endpoints and reuses existing enrollments.</p>
+<p>Browse computers across Orgo workspaces, filter the list, inspect SSH details, and start, stop, restart, suspend or resume computers when supported. Destructive power actions ask for confirmation.</p>
+<p>Requires Zana desktop on macOS or Linux, an Orgo account with API access, and a running Linux Orgo computer for pairing. Orgo subscription and usage charges apply separately. Configure the API key in the private local credential file described in the repository README.</p>
+<p>Installed plugins execute as full-trust code in the Zana server process. This plugin contacts Orgo over HTTPS and writes its dedicated SSH identity and managed configuration locally. It preserves existing SSH keys and does not receive host-daemon tokens.</p>
+  </article>
+  <aside class="facts">
+    <dl>
+      <dt>Plugin id</dt><dd><code>orgo-machines-6758</code></dd>
+      <dt>Author</dt><dd><a href="https://github.com/grebmann1">grebmann1</a></dd>
+      <dt>Category</dt><dd>Remote Machines</dd>
+      <dt>Source</dt><dd class="break"><a href="https://github.com/grebmann1/zana-orgo-machines">github.com/grebmann1/zana-orgo-machines@v0.2.0</a></dd>
+      <dt>Tags</dt><dd><ul class="tags"><li>orgo</li><li>cloud</li><li>remote-machines</li><li>ssh</li></ul></dd>
+    </dl>
+  </aside>
+</div>
+
+
+</main>
+<footer class="wrap footer">
+  <span>Public plugins built by the Zana community.</span>
+  <span><a href="../publish/">Publish a plugin</a> · <a href="https://github.com/salesforce/zana-marketplace">Repository</a> · <a href="https://github.com/salesforce/zana-marketplace/blob/main/marketplace.json">marketplace.json</a></span>
+</footer>
+<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+<script src="../assets/site.js"></script>
+</body>
+</html>

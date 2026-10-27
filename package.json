@@ -1,0 +1,19 @@
+{
+  "name": "zana-community-marketplace",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "test": "node --test --experimental-test-coverage --test-coverage-include=scripts/*.mjs --test-coverage-exclude=scripts/*.test.mjs --test-coverage-lines=80 --test-coverage-branches=80 --test-coverage-functions=80 scripts/*.test.mjs",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "@playwright/test": "1.63.0"
+  }
+}
