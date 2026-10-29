@@ -22,7 +22,7 @@
 <section class="hero">
   <h1>Make Zana yours</h1>
   <p class="lede">Community plugins, installed with one command.</p>
-  <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="q" placeholder="Search 1 plugin" aria-label="Search plugins" autocomplete="off" /><kbd>/</kbd></label>
+  <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="q" placeholder="Search 2 plugins" aria-label="Search plugins" autocomplete="off" /><kbd>/</kbd></label>
 </section>
 
 <section class="howto">
@@ -31,7 +31,7 @@
 </section>
 
 <div class="toolbar">
-  <select id="category" aria-label="Category"><option value="">All categories</option><option value="remote-machines">Remote Machines (1)</option></select>
+  <select id="category" aria-label="Category"><option value="">All categories</option><option value="developer-tools">Developer Tools (1)</option><option value="remote-machines">Remote Machines (1)</option></select>
   <div class="segmented" role="group" aria-label="Sort">
     <button type="button" data-sort="featured" aria-pressed="true">Featured</button>
     <button type="button" data-sort="new" aria-pressed="false">New</button>
@@ -40,6 +40,14 @@
 </div>
 
 <div id="sections">
+<section class="section" id="category-developer-tools">
+  <div class="section-head"><div><h2>Developer Tools <span class="count">1</span></h2></div></div>
+  <div class="grid"><a class="card" href="./salesforce/" data-search="salesforce salesforce independent salesforce workbench and agentforce studio: connected orgs, soql, apex, deployments and agent tools. install with `zcc plugin install salesforce@official`. developer tools salesforce agentforce developer-tools" data-category="developer-tools" data-name="salesforce" data-added="2026-10-29" data-featured="0">
+  <div class="card-head"><span class="avatar" style="--hue:103" aria-hidden="true">S</span><h3>Salesforce</h3></div>
+  <p class="card-desc">Independent Salesforce workbench and Agentforce Studio: connected orgs, SOQL, Apex, deployments and agent tools. Install with `zcc plugin install salesforce@official`.</p>
+  <div class="card-foot"><span class="author"><span class="author-dot">G</span>grebmann1</span><span>Developer Tools</span></div>
+</a></div>
+</section>
 <section class="section" id="category-remote-machines">
   <div class="section-head"><div><h2>Remote Machines <span class="count">1</span></h2></div></div>
   <div class="grid"><a class="card" href="./orgo-machines-6758/" data-search="orgo-machines-6758 orgo machines connect orgo linux computers to zana with automatic ssh setup, and manage their power state from one panel. remote machines orgo cloud remote-machines ssh" data-category="remote-machines" data-name="orgo machines" data-added="2026-10-25" data-featured="0">
@@ -57,6 +65,11 @@
   <div class="card-head"><span class="avatar" style="--hue:267" aria-hidden="true">O</span><h3>Orgo Machines</h3></div>
   <p class="card-desc">Connect Orgo Linux computers to Zana with automatic SSH setup, and manage their power state from one panel.</p>
   <div class="card-foot"><span class="author"><span class="author-dot">G</span>grebmann1</span><span>Remote Machines</span></div>
+</a>
+<a class="card" href="./salesforce/" data-search="salesforce salesforce independent salesforce workbench and agentforce studio: connected orgs, soql, apex, deployments and agent tools. install with `zcc plugin install salesforce@official`. developer tools salesforce agentforce developer-tools" data-category="developer-tools" data-name="salesforce" data-added="2026-10-29" data-featured="0">
+  <div class="card-head"><span class="avatar" style="--hue:103" aria-hidden="true">S</span><h3>Salesforce</h3></div>
+  <p class="card-desc">Independent Salesforce workbench and Agentforce Studio: connected orgs, SOQL, Apex, deployments and agent tools. Install with `zcc plugin install salesforce@official`.</p>
+  <div class="card-foot"><span class="author"><span class="author-dot">G</span>grebmann1</span><span>Developer Tools</span></div>
 </a>
   </div>
   <p class="muted" id="no-match" hidden>No plugin matches your search.</p>
