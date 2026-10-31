@@ -1,0 +1,25 @@
+{
+  "id": "agent-annotations-9fc0",
+  "displayName": "Agent Annotations",
+  "description": "Pin browser elements, write precise feedback, and attach captured element context to your Zana thread composer.",
+  "overview": "Annotate a web page beside a Zana thread. Choose Annotate elements in the browser toolbar, click an element, and save your feedback. Numbered pins attach the element text, selector, styles, and best-effort React component context as compact composer references.\n\nEdit or remove pins before sending. Successful send or queue clears the pins; sent messages retain immutable snapshots. The plugin adds no sidebar item.\n\nRequires Zana desktop with the browser annotation support merged in salesforce/zana PR #622, including experimental_browserToolbarAction and the scoped page bridge. Upgrade older builds before installing. No separate browser automation service, CLI, account, or API key is required.\n\nInstalled plugins run as full-trust code in the Zana server process. This plugin inspects the page you annotate and stores captured context locally; that context is shared with your selected agent provider when you send the thread message.\n\nAn MIT-licensed port of BB Agent Annotations by Michael Yong, retaining the original overlay, capture implementation, and license notice.",
+  "icon": {
+    "lucide": "MessageSquarePlus"
+  },
+  "tags": ["annotations", "browser", "feedback", "developer-tools"],
+  "author": {
+    "name": "grebmann1",
+    "github": "grebmann1",
+    "url": "https://github.com/grebmann1"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/grebmann1/zcc-plugin-agent-annotations.git",
+      "ref": "v0.1.1"
+    }
+  },
+  "site": {
+    "category": "Developer Tools",
+    "addedAt": "2026-10-31"
+  }
+}
