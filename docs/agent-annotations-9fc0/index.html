@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Agent Annotations — Zana Community</title>
+<meta name="description" content="Pin browser elements, write precise feedback, and attach captured element context to your Zana thread composer." />
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="../"><img class="logo" src="../assets/logo.svg" alt="" width="28" height="28" />Zana <span class="muted">community plugins</span></a>
+  <nav>
+    <a href="../">Plugins</a>
+    <a href="https://github.com/salesforce/zana-marketplace">Repository</a>
+    <a class="btn btn-dark" href="../publish/">Publish a plugin</a>
+  </nav>
+</div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<main class="wrap" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Marketplace</a><span>/</span><a href="../?category=developer-tools">Developer Tools</a><span>/</span><span>Agent Annotations</span></nav>
+
+<section class="detail-head">
+  <span class="avatar avatar-lg" style="--hue:51" aria-hidden="true">A</span>
+  <div>
+    <h1>Agent Annotations </h1>
+    <p class="meta"><span class="author"><span class="author-dot">G</span><a href="https://github.com/grebmann1">grebmann1</a></span><span>·</span><a href="../?category=developer-tools">Developer Tools</a><span>·</span><span>Added 2026-10-31</span></p>
+  </div>
+</section>
+
+<section class="install">
+  <div class="cmd cmd-lg"><code><span class="prompt">$</span>zcc marketplace install agent-annotations-9fc0@zana-community</code><button type="button" class="copy" data-copy="zcc marketplace install agent-annotations-9fc0@zana-community">Copy</button></div>
+  <a class="btn" href="https://github.com/grebmann1/zcc-plugin-agent-annotations">View source</a>
+</section>
+<p class="muted small">Not listed in Zana yet? Run <code>zcc marketplace add git:https://github.com/salesforce/zana-marketplace.git</code> once.</p>
+
+
+
+<div class="detail-body">
+  <article class="prose">
+    <h2>Overview</h2>
+    <p class="lead">Pin browser elements, write precise feedback, and attach captured element context to your Zana thread composer.</p>
+    <p>Annotate a web page beside a Zana thread. Choose Annotate elements in the browser toolbar, click an element, and save your feedback. Numbered pins attach the element text, selector, styles, and best-effort React component context as compact composer references.</p>
+<p>Edit or remove pins before sending. Successful send or queue clears the pins; sent messages retain immutable snapshots. The plugin adds no sidebar item.</p>
+<p>Requires Zana desktop with the browser annotation support merged in salesforce/zana PR #622, including experimental_browserToolbarAction and the scoped page bridge. Upgrade older builds before installing. No separate browser automation service, CLI, account, or API key is required.</p>
+<p>Installed plugins run as full-trust code in the Zana server process. This plugin inspects the page you annotate and stores captured context locally; that context is shared with your selected agent provider when you send the thread message.</p>
+<p>An MIT-licensed port of BB Agent Annotations by Michael Yong, retaining the original overlay, capture implementation, and license notice.</p>
+  </article>
+  <aside class="facts">
+    <dl>
+      <dt>Plugin id</dt><dd><code>agent-annotations-9fc0</code></dd>
+      <dt>Author</dt><dd><a href="https://github.com/grebmann1">grebmann1</a></dd>
+      <dt>Category</dt><dd>Developer Tools</dd>
+      <dt>Source</dt><dd class="break"><a href="https://github.com/grebmann1/zcc-plugin-agent-annotations">github.com/grebmann1/zcc-plugin-agent-annotations@v0.1.1</a></dd>
+      <dt>Tags</dt><dd><ul class="tags"><li>annotations</li><li>browser</li><li>feedback</li><li>developer-tools</li></ul></dd>
+    </dl>
+  </aside>
+</div>
+
+<section class="section">
+  <div class="section-head"><div><h2>More in Developer Tools <span class="count">1</span></h2></div><a class="view-all" href="../?category=developer-tools">View all</a></div>
+  <div class="grid"><a class="card" href="../salesforce/" data-search="salesforce salesforce independent salesforce workbench and agentforce studio: connected orgs, soql, apex, deployments and agent tools. install with `zcc plugin install salesforce@official`. developer tools salesforce agentforce developer-tools" data-category="developer-tools" data-name="salesforce" data-added="2026-10-29" data-featured="0">
+  <div class="card-head"><span class="avatar" style="--hue:103" aria-hidden="true">S</span><h3>Salesforce</h3></div>
+  <p class="card-desc">Independent Salesforce workbench and Agentforce Studio: connected orgs, SOQL, Apex, deployments and agent tools. Install with `zcc plugin install salesforce@official`.</p>
+  <div class="card-foot"><span class="author"><span class="author-dot">G</span>grebmann1</span><span>Developer Tools</span></div>
+</a></div>
+</section>
+</main>
+<footer class="wrap footer">
+  <span>Public plugins built by the Zana community.</span>
+  <span><a href="../publish/">Publish a plugin</a> · <a href="https://github.com/salesforce/zana-marketplace">Repository</a> · <a href="https://github.com/salesforce/zana-marketplace/blob/main/marketplace.json">marketplace.json</a></span>
+</footer>
+<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+<script src="../assets/site.js"></script>
+</body>
+</html>
