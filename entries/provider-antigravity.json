@@ -1,0 +1,31 @@
+{
+  "id": "provider-antigravity",
+  "displayName": "Antigravity Provider",
+  "description": "Run Zana threads through Google’s Antigravity Native ACP server, with account controls, native models, planning and subscription usage.",
+  "overview": "Add Google Antigravity as a Zana thread provider through the Native ACP server, agy_acp_server. Use the native model catalogue, Plan mode, account recovery from the thread side panel, and subscription usage checks in Settings.\n\n## Get started\n\nInstall with `zcc marketplace install provider-antigravity@zana-community`. Open Settings → Antigravity Provider, choose your authentication method, and verify the session and models. Start a thread and select Antigravity.\n\n## Requirements\n\nRequires a compatible Zana desktop build (the package declares Zana >=2.2.2), network access, and a Google account or credentials entitled to use the selected authentication method and models. Google subscription or API charges apply separately. Model availability depends on your account. Supported runtime targets are macOS Apple Silicon and Intel, Linux x64 and arm64, and Windows x64.\n\n## Runtime and credentials\n\nThe plugin can download a managed Google Native ACP distribution and verifies its archive with SHA-256 before extraction. You can configure a native executable override. It supports personal OAuth, business OAuth, Gemini API key and agent-platform authentication. Credentials and settings are maintained locally; thread content is sent to the selected Google service.\n\n## Distribution\n\nMaintained by Ros Haitovich in matrostik/zana-plugins. This listing pins version 0.3.0’s source commit, including compiled server, UI and host artifacts. Installed plugins run as full-trust code in Zana’s server process.",
+  "icon": {
+    "lucide": "Sparkles"
+  },
+  "tags": [
+    "antigravity",
+    "google",
+    "providers",
+    "ai"
+  ],
+  "author": {
+    "name": "Ros Haitovich",
+    "github": "matrostik",
+    "url": "https://github.com/matrostik"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/matrostik/zana-plugins.git",
+      "subdir": "plugins/provider-antigravity",
+      "ref": "391700c9479a97ed17561270a7b18e090d7a5b03"
+    }
+  },
+  "site": {
+    "category": "AI Providers",
+    "addedAt": "2026-11-01"
+  }
+}

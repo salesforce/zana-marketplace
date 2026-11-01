@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Antigravity Provider — Zana Community</title>
+<meta name="description" content="Run Zana threads through Google’s Antigravity Native ACP server, with account controls, native models, planning and subscription usage." />
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="../"><img class="logo" src="../assets/logo.svg" alt="" width="28" height="28" />Zana <span class="muted">community plugins</span></a>
+  <nav>
+    <a href="../">Plugins</a>
+    <a href="https://github.com/salesforce/zana-marketplace">Repository</a>
+    <a class="btn btn-dark" href="../publish/">Publish a plugin</a>
+  </nav>
+</div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<main class="wrap" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Marketplace</a><span>/</span><a href="../?category=ai-providers">AI Providers</a><span>/</span><span>Antigravity Provider</span></nav>
+
+<section class="detail-head">
+  <span class="avatar avatar-lg" style="--hue:112" aria-hidden="true">A</span>
+  <div>
+    <h1>Antigravity Provider </h1>
+    <p class="meta"><span class="author"><span class="author-dot">R</span><a href="https://github.com/matrostik">Ros Haitovich</a></span><span>·</span><a href="../?category=ai-providers">AI Providers</a><span>·</span><span>Added 2026-11-01</span></p>
+  </div>
+</section>
+
+<section class="install">
+  <div class="cmd cmd-lg"><code><span class="prompt">$</span>zcc marketplace install provider-antigravity@zana-community</code><button type="button" class="copy" data-copy="zcc marketplace install provider-antigravity@zana-community">Copy</button></div>
+  <a class="btn" href="https://github.com/matrostik/zana-plugins">View source</a>
+</section>
+<p class="muted small">Not listed in Zana yet? Run <code>zcc marketplace add git:https://github.com/salesforce/zana-marketplace.git</code> once.</p>
+
+
+
+<div class="detail-body">
+  <article class="prose">
+    <h2>Overview</h2>
+    <p class="lead">Run Zana threads through Google’s Antigravity Native ACP server, with account controls, native models, planning and subscription usage.</p>
+    <p>Add Google Antigravity as a Zana thread provider through the Native ACP server, agy_acp_server. Use the native model catalogue, Plan mode, account recovery from the thread side panel, and subscription usage checks in Settings.</p>
+<p>## Get started</p>
+<p>Install with `zcc marketplace install provider-antigravity@zana-community`. Open Settings → Antigravity Provider, choose your authentication method, and verify the session and models. Start a thread and select Antigravity.</p>
+<p>## Requirements</p>
+<p>Requires a compatible Zana desktop build (the package declares Zana &gt;=2.2.2), network access, and a Google account or credentials entitled to use the selected authentication method and models. Google subscription or API charges apply separately. Model availability depends on your account. Supported runtime targets are macOS Apple Silicon and Intel, Linux x64 and arm64, and Windows x64.</p>
+<p>## Runtime and credentials</p>
+<p>The plugin can download a managed Google Native ACP distribution and verifies its archive with SHA-256 before extraction. You can configure a native executable override. It supports personal OAuth, business OAuth, Gemini API key and agent-platform authentication. Credentials and settings are maintained locally; thread content is sent to the selected Google service.</p>
+<p>## Distribution</p>
+<p>Maintained by Ros Haitovich in matrostik/zana-plugins. This listing pins version 0.3.0’s source commit, including compiled server, UI and host artifacts. Installed plugins run as full-trust code in Zana’s server process.</p>
+  </article>
+  <aside class="facts">
+    <dl>
+      <dt>Plugin id</dt><dd><code>provider-antigravity</code></dd>
+      <dt>Author</dt><dd><a href="https://github.com/matrostik">Ros Haitovich</a></dd>
+      <dt>Category</dt><dd>AI Providers</dd>
+      <dt>Source</dt><dd class="break"><a href="https://github.com/matrostik/zana-plugins">github.com/matrostik/zana-plugins/plugins/provider-antigravity@391700c9479a97ed17561270a7b18e090d7a5b03</a></dd>
+      <dt>Tags</dt><dd><ul class="tags"><li>antigravity</li><li>google</li><li>providers</li><li>ai</li></ul></dd>
+    </dl>
+  </aside>
+</div>
+
+
+</main>
+<footer class="wrap footer">
+  <span>Public plugins built by the Zana community.</span>
+  <span><a href="../publish/">Publish a plugin</a> · <a href="https://github.com/salesforce/zana-marketplace">Repository</a> · <a href="https://github.com/salesforce/zana-marketplace/blob/main/marketplace.json">marketplace.json</a></span>
+</footer>
+<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+<script src="../assets/site.js"></script>
+</body>
+</html>
