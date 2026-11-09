@@ -1,0 +1,25 @@
+{
+  "id": "warcraft-voices",
+  "displayName": "Warcraft Voices",
+  "description": "Hear Orc, Human and Murloc voices when an agent needs input or becomes idle. Mix characters per alert and download only the voices you want.",
+  "overview": "Give your agents Warcraft voices: Orc Peon, Human Peasant, Orc Grunt and Murloc. Choose a different character for Needs you and Becomes idle, or use one character for both. Preview each alert in a Warcraft-inspired interface.\n\nOpen Settings → Notifications → Sounds, select Warcraft Voices, download the characters you want and choose a voice for each alert. Enable Becomes idle if wanted, then turn on Play notification sounds. Installing the plugin does not change your active sound provider.\n\nQuiet spacing, rotating clips, volume controls and a 30-minute pause help keep multiple sessions manageable. Input alerts take priority; idle means the agent is at rest, not that its work succeeded.\n\nAutomatic alerts and the Settings integration require a Zana desktop build containing salesforce/zana PR #698 and the notificationSoundProvider SDK slot. Older hosts retain downloads and manual previews in the plugin Configure section, with automatic playback off. The Git release includes compiled runtime files; no separate CLI, account, API key or dependency installation is needed. Internet access is needed to download characters.\n\nInstalled plugins run as full-trust code in the Zana server process. This plugin downloads requested audio from a pinned PeonPing/og-packs revision on GitHub, checks file signatures and SHA-256 hashes, and stores clips and preferences locally. It runs one selected sound provider across windows.\n\nPlugin source code is MIT licensed. Game audio is not bundled. Upstream PeonPing pack manifests declare CC-BY-NC-4.0; source attribution and applicable audio rights are linked in the plugin and its README.",
+  "icon": {
+    "lucide": "Swords"
+  },
+  "tags": ["sounds", "notifications", "warcraft", "voices", "agents"],
+  "author": {
+    "name": "grebmann1",
+    "github": "grebmann1",
+    "url": "https://github.com/grebmann1"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/grebmann1/zcc-plugin-warcraft-voices.git",
+      "ref": "v0.2.0"
+    }
+  },
+  "site": {
+    "category": "Sounds & Notifications",
+    "addedAt": "2026-11-09"
+  }
+}
