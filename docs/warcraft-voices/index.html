@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Warcraft Voices — Zana Community</title>
+<meta name="description" content="Hear Orc, Human and Murloc voices when an agent needs input or becomes idle. Mix characters per alert and download only the voices you want." />
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="../"><img class="logo" src="../assets/logo.svg" alt="" width="28" height="28" />Zana <span class="muted">community plugins</span></a>
+  <nav>
+    <a href="../">Plugins</a>
+    <a href="https://github.com/salesforce/zana-marketplace">Repository</a>
+    <a class="btn btn-dark" href="../publish/">Publish a plugin</a>
+  </nav>
+</div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<main class="wrap" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Marketplace</a><span>/</span><a href="../?category=sounds-and-notifications">Sounds &amp; Notifications</a><span>/</span><span>Warcraft Voices</span></nav>
+
+<section class="detail-head">
+  <span class="avatar avatar-lg" style="--hue:262" aria-hidden="true">W</span>
+  <div>
+    <h1>Warcraft Voices </h1>
+    <p class="meta"><span class="author"><span class="author-dot">G</span><a href="https://github.com/grebmann1">grebmann1</a></span><span>·</span><a href="../?category=sounds-and-notifications">Sounds &amp; Notifications</a><span>·</span><span>Added 2026-11-09</span></p>
+  </div>
+</section>
+
+<section class="install">
+  <div class="cmd cmd-lg"><code><span class="prompt">$</span>zcc marketplace install warcraft-voices@zana-community</code><button type="button" class="copy" data-copy="zcc marketplace install warcraft-voices@zana-community">Copy</button></div>
+  <a class="btn" href="https://github.com/grebmann1/zcc-plugin-warcraft-voices">View source</a>
+</section>
+<p class="muted small">Not listed in Zana yet? Run <code>zcc marketplace add git:https://github.com/salesforce/zana-marketplace.git</code> once.</p>
+
+
+
+<div class="detail-body">
+  <article class="prose">
+    <h2>Overview</h2>
+    <p class="lead">Hear Orc, Human and Murloc voices when an agent needs input or becomes idle. Mix characters per alert and download only the voices you want.</p>
+    <p>Give your agents Warcraft voices: Orc Peon, Human Peasant, Orc Grunt and Murloc. Choose a different character for Needs you and Becomes idle, or use one character for both. Preview each alert in a Warcraft-inspired interface.</p>
+<p>Open Settings → Notifications → Sounds, select Warcraft Voices, download the characters you want and choose a voice for each alert. Enable Becomes idle if wanted, then turn on Play notification sounds. Installing the plugin does not change your active sound provider.</p>
+<p>Quiet spacing, rotating clips, volume controls and a 30-minute pause help keep multiple sessions manageable. Input alerts take priority; idle means the agent is at rest, not that its work succeeded.</p>
+<p>Automatic alerts and the Settings integration require a Zana desktop build containing salesforce/zana PR #698 and the notificationSoundProvider SDK slot. Older hosts retain downloads and manual previews in the plugin Configure section, with automatic playback off. The Git release includes compiled runtime files; no separate CLI, account, API key or dependency installation is needed. Internet access is needed to download characters.</p>
+<p>Installed plugins run as full-trust code in the Zana server process. This plugin downloads requested audio from a pinned PeonPing/og-packs revision on GitHub, checks file signatures and SHA-256 hashes, and stores clips and preferences locally. It runs one selected sound provider across windows.</p>
+<p>Plugin source code is MIT licensed. Game audio is not bundled. Upstream PeonPing pack manifests declare CC-BY-NC-4.0; source attribution and applicable audio rights are linked in the plugin and its README.</p>
+  </article>
+  <aside class="facts">
+    <dl>
+      <dt>Plugin id</dt><dd><code>warcraft-voices</code></dd>
+      <dt>Author</dt><dd><a href="https://github.com/grebmann1">grebmann1</a></dd>
+      <dt>Category</dt><dd>Sounds &amp; Notifications</dd>
+      <dt>Source</dt><dd class="break"><a href="https://github.com/grebmann1/zcc-plugin-warcraft-voices">github.com/grebmann1/zcc-plugin-warcraft-voices@v0.2.0</a></dd>
+      <dt>Tags</dt><dd><ul class="tags"><li>sounds</li><li>notifications</li><li>warcraft</li><li>voices</li><li>agents</li></ul></dd>
+    </dl>
+  </aside>
+</div>
+
+
+</main>
+<footer class="wrap footer">
+  <span>Public plugins built by the Zana community.</span>
+  <span><a href="../publish/">Publish a plugin</a> · <a href="https://github.com/salesforce/zana-marketplace">Repository</a> · <a href="https://github.com/salesforce/zana-marketplace/blob/main/marketplace.json">marketplace.json</a></span>
+</footer>
+<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+<script src="../assets/site.js"></script>
+</body>
+</html>
