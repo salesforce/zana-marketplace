@@ -87,6 +87,34 @@
       }
     },
     {
+      "id": "cua-driver-d68f",
+      "displayName": "Computer Use",
+      "description": "Let Zana agents see and operate macOS and Windows apps with Cua Driver, one-thread desktop control and approval prompts for sensitive actions.",
+      "overview": "Let agents inspect native app windows, take screenshots, click and type through Cua Driver on the computer running Zana. One thread holds the desktop lease at a time, and it is released when the turn finishes, fails or closes. Sensitive actions such as foreground input, whole-desktop access, clipboard use, file uploads and force-quit ask for approval by default.\n\nIncludes Cua Driver 0.33.4 for Apple Silicon and Intel Macs, and Windows x64 and ARM64. Open Plugins → Computer Use → Configuration to prepare the included driver locally or select an existing installation. The Git package includes compiled runtime files and about 135 MB of driver archives; no separate dependency installation or build is needed. Included-driver setup works offline.\n\nRequires Zana desktop on macOS or Windows, an unlocked interactive desktop, and the required OS permissions. macOS requires Accessibility and Screen Recording permission for the selected CuaDriver.app; Windows requires the same interactive user session and may refuse elevated apps or UAC prompts. Opening Zana remotely controls the desktop of its host machine. CLI-agent sessions do not receive the plugin tools.\n\nAdds agent tools, a setup guide, desktop status and lease controls, a thread Desktop tab and the zcc cua-driver CLI. It does not add a sidebar entry. The daemon uses standard or bounded permissions, and the plugin refuses a daemon running in unrestricted mode. Leases and approval prompts apply to calls through this plugin. Cua Driver has upstream telemetry on by default; Configuration shows its state and can disable it.\n\nInstalled plugins run as full-trust code in the Zana server process. Native macOS setup and configuration have recorded live verification. Windows behavior is covered by fake-driver tests; no Windows live verification is claimed. The optional agent cursor currently covers only the main monitor on macOS.",
+      "icon": {
+        "lucide": "MousePointerClick"
+      },
+      "tags": [
+        "computer-use",
+        "desktop",
+        "automation",
+        "macos",
+        "windows",
+        "cua"
+      ],
+      "author": {
+        "name": "grebmann1",
+        "github": "grebmann1",
+        "url": "https://github.com/grebmann1"
+      },
+      "source": {
+        "git": {
+          "url": "https://github.com/grebmann1/zana-computer-use.git",
+          "ref": "9c68715305231a9f3e51b90338e8db4e0de93386"
+        }
+      }
+    },
+    {
       "id": "orgo-machines-6758",
       "displayName": "Orgo Machines",
       "description": "Connect Orgo Linux computers to Zana with automatic SSH setup, and manage their power state from one panel.",

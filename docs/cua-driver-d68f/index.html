@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Computer Use — Zana Community</title>
+<meta name="description" content="Let Zana agents see and operate macOS and Windows apps with Cua Driver, one-thread desktop control and approval prompts for sensitive actions." />
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="../"><img class="logo" src="../assets/logo.svg" alt="" width="28" height="28" />Zana <span class="muted">community plugins</span></a>
+  <nav>
+    <a href="../">Plugins</a>
+    <a href="https://github.com/salesforce/zana-marketplace">Repository</a>
+    <a class="btn btn-dark" href="../publish/">Publish a plugin</a>
+  </nav>
+</div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<main class="wrap" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Marketplace</a><span>/</span><a href="../?category=computer-use">Computer Use</a><span>/</span><span>Computer Use</span></nav>
+
+<section class="detail-head">
+  <span class="avatar avatar-lg" style="--hue:47" aria-hidden="true">C</span>
+  <div>
+    <h1>Computer Use </h1>
+    <p class="meta"><span class="author"><span class="author-dot">G</span><a href="https://github.com/grebmann1">grebmann1</a></span><span>·</span><a href="../?category=computer-use">Computer Use</a><span>·</span><span>Added 2026-11-12</span></p>
+  </div>
+</section>
+
+<section class="install">
+  <div class="cmd cmd-lg"><code><span class="prompt">$</span>zcc marketplace install cua-driver-d68f@zana-community</code><button type="button" class="copy" data-copy="zcc marketplace install cua-driver-d68f@zana-community">Copy</button></div>
+  <a class="btn" href="https://github.com/grebmann1/zana-computer-use">View source</a>
+</section>
+<p class="muted small">Not listed in Zana yet? Run <code>zcc marketplace add git:https://github.com/salesforce/zana-marketplace.git</code> once.</p>
+
+
+
+<div class="detail-body">
+  <article class="prose">
+    <h2>Overview</h2>
+    <p class="lead">Let Zana agents see and operate macOS and Windows apps with Cua Driver, one-thread desktop control and approval prompts for sensitive actions.</p>
+    <p>Let agents inspect native app windows, take screenshots, click and type through Cua Driver on the computer running Zana. One thread holds the desktop lease at a time, and it is released when the turn finishes, fails or closes. Sensitive actions such as foreground input, whole-desktop access, clipboard use, file uploads and force-quit ask for approval by default.</p>
+<p>Includes Cua Driver 0.33.4 for Apple Silicon and Intel Macs, and Windows x64 and ARM64. Open Plugins → Computer Use → Configuration to prepare the included driver locally or select an existing installation. The Git package includes compiled runtime files and about 135 MB of driver archives; no separate dependency installation or build is needed. Included-driver setup works offline.</p>
+<p>Requires Zana desktop on macOS or Windows, an unlocked interactive desktop, and the required OS permissions. macOS requires Accessibility and Screen Recording permission for the selected CuaDriver.app; Windows requires the same interactive user session and may refuse elevated apps or UAC prompts. Opening Zana remotely controls the desktop of its host machine. CLI-agent sessions do not receive the plugin tools.</p>
+<p>Adds agent tools, a setup guide, desktop status and lease controls, a thread Desktop tab and the zcc cua-driver CLI. It does not add a sidebar entry. The daemon uses standard or bounded permissions, and the plugin refuses a daemon running in unrestricted mode. Leases and approval prompts apply to calls through this plugin. Cua Driver has upstream telemetry on by default; Configuration shows its state and can disable it.</p>
+<p>Installed plugins run as full-trust code in the Zana server process. Native macOS setup and configuration have recorded live verification. Windows behavior is covered by fake-driver tests; no Windows live verification is claimed. The optional agent cursor currently covers only the main monitor on macOS.</p>
+  </article>
+  <aside class="facts">
+    <dl>
+      <dt>Plugin id</dt><dd><code>cua-driver-d68f</code></dd>
+      <dt>Author</dt><dd><a href="https://github.com/grebmann1">grebmann1</a></dd>
+      <dt>Category</dt><dd>Computer Use</dd>
+      <dt>Source</dt><dd class="break"><a href="https://github.com/grebmann1/zana-computer-use">github.com/grebmann1/zana-computer-use@9c68715305231a9f3e51b90338e8db4e0de93386</a></dd>
+      <dt>Tags</dt><dd><ul class="tags"><li>computer-use</li><li>desktop</li><li>automation</li><li>macos</li><li>windows</li><li>cua</li></ul></dd>
+    </dl>
+  </aside>
+</div>
+
+
+</main>
+<footer class="wrap footer">
+  <span>Public plugins built by the Zana community.</span>
+  <span><a href="../publish/">Publish a plugin</a> · <a href="https://github.com/salesforce/zana-marketplace">Repository</a> · <a href="https://github.com/salesforce/zana-marketplace/blob/main/marketplace.json">marketplace.json</a></span>
+</footer>
+<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+<script src="../assets/site.js"></script>
+</body>
+</html>
