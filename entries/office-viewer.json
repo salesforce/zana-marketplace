@@ -1,0 +1,32 @@
+{
+  "id": "office-viewer",
+  "displayName": "Office Viewer",
+  "description": "Preview Word, Excel and PowerPoint content beside a Zana thread, then quote a section into your draft.",
+  "overview": "Read .docx documents, .xlsx workbooks and .pptx presentations beside your conversation. Open a file from the project Explorer or a thread attachment; Office Viewer opens automatically. Choose a sheet or slide, then use “Quote section” to add its text to the current conversation draft.\n\nOpen Settings → Office Viewer for supported formats, preview limits and a short usage guide in Zana’s standard grouped Settings rows. No additional configuration, Office installation, account or API key is required.\n\nRequires Zana 2.6.1 or later with the current project-file and thread-list SDK APIs. The v0.1.1 Git release includes compiled runtime files. Upgrade older Zana builds before installing.\n\nThis is a read-only text and cell-value preview. Files are limited to 8 MiB. Original layout, images, charts, date/number formatting, formula calculation and editing are unavailable. Workbooks show stored values, or formula text when no cached value exists. Password-protected, macro and legacy binary formats are unsupported.\n\nInstalled plugins run as full-trust code in the Zana server process. Office Viewer reads the selected project or attachment file through Zana’s scoped file APIs and parses it locally. It sends no telemetry or document content to an external service. Quoted text enters your conversation draft and is shared with your selected agent provider when you send it.\n\nAn independently maintained, MIT-licensed Zana adaptation inspired by VKirill’s Office Viewer for BB. Original attribution and source revision are preserved in the plugin repository.",
+  "icon": {
+    "lucide": "FileText"
+  },
+  "tags": [
+    "office",
+    "documents",
+    "docx",
+    "xlsx",
+    "pptx",
+    "preview"
+  ],
+  "author": {
+    "name": "grebmann1",
+    "github": "grebmann1",
+    "url": "https://github.com/grebmann1"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/grebmann1/zcc-plugin-office-viewer.git",
+      "ref": "v0.1.1"
+    }
+  },
+  "site": {
+    "category": "Productivity",
+    "addedAt": "2026-11-15"
+  }
+}

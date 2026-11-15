@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Office Viewer — Zana Community</title>
+<meta name="description" content="Preview Word, Excel and PowerPoint content beside a Zana thread, then quote a section into your draft." />
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="../"><img class="logo" src="../assets/logo.svg" alt="" width="28" height="28" />Zana <span class="muted">community plugins</span></a>
+  <nav>
+    <a href="../">Plugins</a>
+    <a href="https://github.com/salesforce/zana-marketplace">Repository</a>
+    <a class="btn btn-dark" href="../publish/">Publish a plugin</a>
+  </nav>
+</div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<main class="wrap" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Marketplace</a><span>/</span><a href="../?category=productivity">Productivity</a><span>/</span><span>Office Viewer</span></nav>
+
+<section class="detail-head">
+  <span class="avatar avatar-lg" style="--hue:3" aria-hidden="true">O</span>
+  <div>
+    <h1>Office Viewer </h1>
+    <p class="meta"><span class="author"><span class="author-dot">G</span><a href="https://github.com/grebmann1">grebmann1</a></span><span>·</span><a href="../?category=productivity">Productivity</a><span>·</span><span>Added 2026-11-15</span></p>
+  </div>
+</section>
+
+<section class="install">
+  <div class="cmd cmd-lg"><code><span class="prompt">$</span>zcc marketplace install office-viewer@zana-community</code><button type="button" class="copy" data-copy="zcc marketplace install office-viewer@zana-community">Copy</button></div>
+  <a class="btn" href="https://github.com/grebmann1/zcc-plugin-office-viewer">View source</a>
+</section>
+<p class="muted small">Not listed in Zana yet? Run <code>zcc marketplace add git:https://github.com/salesforce/zana-marketplace.git</code> once.</p>
+
+
+
+<div class="detail-body">
+  <article class="prose">
+    <h2>Overview</h2>
+    <p class="lead">Preview Word, Excel and PowerPoint content beside a Zana thread, then quote a section into your draft.</p>
+    <p>Read .docx documents, .xlsx workbooks and .pptx presentations beside your conversation. Open a file from the project Explorer or a thread attachment; Office Viewer opens automatically. Choose a sheet or slide, then use “Quote section” to add its text to the current conversation draft.</p>
+<p>Open Settings → Office Viewer for supported formats, preview limits and a short usage guide in Zana’s standard grouped Settings rows. No additional configuration, Office installation, account or API key is required.</p>
+<p>Requires Zana 2.6.1 or later with the current project-file and thread-list SDK APIs. The v0.1.1 Git release includes compiled runtime files. Upgrade older Zana builds before installing.</p>
+<p>This is a read-only text and cell-value preview. Files are limited to 8 MiB. Original layout, images, charts, date/number formatting, formula calculation and editing are unavailable. Workbooks show stored values, or formula text when no cached value exists. Password-protected, macro and legacy binary formats are unsupported.</p>
+<p>Installed plugins run as full-trust code in the Zana server process. Office Viewer reads the selected project or attachment file through Zana’s scoped file APIs and parses it locally. It sends no telemetry or document content to an external service. Quoted text enters your conversation draft and is shared with your selected agent provider when you send it.</p>
+<p>An independently maintained, MIT-licensed Zana adaptation inspired by VKirill’s Office Viewer for BB. Original attribution and source revision are preserved in the plugin repository.</p>
+  </article>
+  <aside class="facts">
+    <dl>
+      <dt>Plugin id</dt><dd><code>office-viewer</code></dd>
+      <dt>Author</dt><dd><a href="https://github.com/grebmann1">grebmann1</a></dd>
+      <dt>Category</dt><dd>Productivity</dd>
+      <dt>Source</dt><dd class="break"><a href="https://github.com/grebmann1/zcc-plugin-office-viewer">github.com/grebmann1/zcc-plugin-office-viewer@v0.1.1</a></dd>
+      <dt>Tags</dt><dd><ul class="tags"><li>office</li><li>documents</li><li>docx</li><li>xlsx</li><li>pptx</li><li>preview</li></ul></dd>
+    </dl>
+  </aside>
+</div>
+
+
+</main>
+<footer class="wrap footer">
+  <span>Public plugins built by the Zana community.</span>
+  <span><a href="../publish/">Publish a plugin</a> · <a href="https://github.com/salesforce/zana-marketplace">Repository</a> · <a href="https://github.com/salesforce/zana-marketplace/blob/main/marketplace.json">marketplace.json</a></span>
+</footer>
+<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+<script src="../assets/site.js"></script>
+</body>
+</html>
