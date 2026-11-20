@@ -115,6 +115,35 @@
       }
     },
     {
+      "id": "draft-studio",
+      "displayName": "Draft Studio",
+      "description": "Voice dictation, on-device Local Whisper, AI writing refinement (5 tones), translation, summarization, technical specs, word diffs, and searchable activity history for Zana — no API key needed.",
+      "overview": "Voice dictation and AI writing workbench for Zana Command Center. Dictate directly inside thread composers, quick-dictate from Zana’s Home screen, or shape spoken, typed, and pasted drafts inside global and per-project **Draft Studio** workspaces before inserting them for review. Nothing is sent automatically.\n\n## What you get\n\n- **Voice Dictation Everywhere**: Record from an inline composer mic pill (scope-gated for main screen, projects, or both), the Home screen quick-dictate card, or the Draft Studio canvas with live audio metering, microphone selection, sound cues, and a personal spelling dictionary.\n- **On-Device Local Whisper**: Install a pinned `whisper.cpp` server runtime and download verified multilingual Whisper models directly from **Draft Studio → Settings** for offline transcription (Windows x64 and Linux x64), or use Zana host voice, OpenAI, or Google Gemini.\n- **AI Writing & Transformations**: Improve writing across 5 tones (*Standard, Casual, Conversational, Professional, Technical*), summarize into crisp executive bullet points, structure rough notes into a technical spec (`Goal`, `Architecture`, `Implementation Steps`), translate naturally while preserving code/Markdown, or run custom instructions.\n- **Diff Review & Model Selection**: Inspect word-level diffs between input and refined output, switch between dynamically discovered Zana host models (sorted cheapest-first) or direct API keys, and sync automatically with the active composer provider.\n- **Activity History & Privacy Controls**: Search, filter, star, and reload past dictations and refinements with configurable entry/day retention limits and one-click history clearing.\n\n## Get started\n\nInstall with `zcc marketplace install draft-studio@zana-community`. Defaults use Zana’s built-in host voice transcription and assistant inference, so no external API key is required. Configure surface visibility, microphone, sound cues, Local Whisper, or optional API keys in **Settings → Draft Studio**.\n\n## Requirements & runtime\n\nRequires Zana `>=1.0.0` and microphone access for voice dictation. Managed Local Whisper downloads pinned `whisper.cpp` (`v1.9.5`) binaries and Hugging Face model weights verified by byte size and SHA-256 on Windows x64 and Linux x64 (macOS and arm64 Local Whisper builds are not yet enabled). Choosing OpenAI, Google Gemini, or Anthropic providers sends audio or text to those APIs using your configured API keys.\n\n## Distribution\n\nMaintained by Ros Haitovich in matrostik/zana-plugins. Pinned to commit `28455e76db8ba0b1b83c41174043c1e95d6e5e71` (v0.2.0), including compiled `server.mjs` and `app.js` artifacts. Installed plugins run as full-trust code in Zana’s server process.",
+      "icon": {
+        "lucide": "Mic"
+      },
+      "tags": [
+        "voice",
+        "dictation",
+        "writing",
+        "whisper",
+        "translation",
+        "productivity"
+      ],
+      "author": {
+        "name": "Ros Haitovich",
+        "github": "matrostik",
+        "url": "https://github.com/matrostik"
+      },
+      "source": {
+        "git": {
+          "url": "https://github.com/matrostik/zana-plugins.git",
+          "subdir": "plugins/draft-studio",
+          "ref": "28455e76db8ba0b1b83c41174043c1e95d6e5e71"
+        }
+      }
+    },
+    {
       "id": "office-viewer",
       "displayName": "Office Viewer",
       "description": "Preview Word, Excel and PowerPoint content beside a Zana thread, then quote a section into your draft.",

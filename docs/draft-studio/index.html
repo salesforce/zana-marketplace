@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Draft Studio — Zana Community</title>
+<meta name="description" content="Voice dictation, on-device Local Whisper, AI writing refinement (5 tones), translation, summarization, technical specs, word diffs, and searchable activity history for Zana — no API key needed." />
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="../"><img class="logo" src="../assets/logo.svg" alt="" width="28" height="28" />Zana <span class="muted">community plugins</span></a>
+  <nav>
+    <a href="../">Plugins</a>
+    <a href="https://github.com/salesforce/zana-marketplace">Repository</a>
+    <a class="btn btn-dark" href="../publish/">Publish a plugin</a>
+  </nav>
+</div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<main class="wrap" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Marketplace</a><span>/</span><a href="../?category=productivity">Productivity</a><span>/</span><span>Draft Studio</span></nav>
+
+<section class="detail-head">
+  <span class="avatar avatar-lg" style="--hue:98" aria-hidden="true">D</span>
+  <div>
+    <h1>Draft Studio </h1>
+    <p class="meta"><span class="author"><span class="author-dot">R</span><a href="https://github.com/matrostik">Ros Haitovich</a></span><span>·</span><a href="../?category=productivity">Productivity</a><span>·</span><span>Added 2026-11-20</span></p>
+  </div>
+</section>
+
+<section class="install">
+  <div class="cmd cmd-lg"><code><span class="prompt">$</span>zcc marketplace install draft-studio@zana-community</code><button type="button" class="copy" data-copy="zcc marketplace install draft-studio@zana-community">Copy</button></div>
+  <a class="btn" href="https://github.com/matrostik/zana-plugins">View source</a>
+</section>
+<p class="muted small">Not listed in Zana yet? Run <code>zcc marketplace add git:https://github.com/salesforce/zana-marketplace.git</code> once.</p>
+
+
+
+<div class="detail-body">
+  <article class="prose">
+    <h2>Overview</h2>
+    <p class="lead">Voice dictation, on-device Local Whisper, AI writing refinement (5 tones), translation, summarization, technical specs, word diffs, and searchable activity history for Zana — no API key needed.</p>
+    <p>Voice dictation and AI writing workbench for Zana Command Center. Dictate directly inside thread composers, quick-dictate from Zana’s Home screen, or shape spoken, typed, and pasted drafts inside global and per-project **Draft Studio** workspaces before inserting them for review. Nothing is sent automatically.</p>
+<p>## What you get</p>
+<p>- **Voice Dictation Everywhere**: Record from an inline composer mic pill (scope-gated for main screen, projects, or both), the Home screen quick-dictate card, or the Draft Studio canvas with live audio metering, microphone selection, sound cues, and a personal spelling dictionary.<br />- **On-Device Local Whisper**: Install a pinned `whisper.cpp` server runtime and download verified multilingual Whisper models directly from **Draft Studio → Settings** for offline transcription (Windows x64 and Linux x64), or use Zana host voice, OpenAI, or Google Gemini.<br />- **AI Writing &amp; Transformations**: Improve writing across 5 tones (*Standard, Casual, Conversational, Professional, Technical*), summarize into crisp executive bullet points, structure rough notes into a technical spec (`Goal`, `Architecture`, `Implementation Steps`), translate naturally while preserving code/Markdown, or run custom instructions.<br />- **Diff Review &amp; Model Selection**: Inspect word-level diffs between input and refined output, switch between dynamically discovered Zana host models (sorted cheapest-first) or direct API keys, and sync automatically with the active composer provider.<br />- **Activity History &amp; Privacy Controls**: Search, filter, star, and reload past dictations and refinements with configurable entry/day retention limits and one-click history clearing.</p>
+<p>## Get started</p>
+<p>Install with `zcc marketplace install draft-studio@zana-community`. Defaults use Zana’s built-in host voice transcription and assistant inference, so no external API key is required. Configure surface visibility, microphone, sound cues, Local Whisper, or optional API keys in **Settings → Draft Studio**.</p>
+<p>## Requirements &amp; runtime</p>
+<p>Requires Zana `&gt;=1.0.0` and microphone access for voice dictation. Managed Local Whisper downloads pinned `whisper.cpp` (`v1.9.5`) binaries and Hugging Face model weights verified by byte size and SHA-256 on Windows x64 and Linux x64 (macOS and arm64 Local Whisper builds are not yet enabled). Choosing OpenAI, Google Gemini, or Anthropic providers sends audio or text to those APIs using your configured API keys.</p>
+<p>## Distribution</p>
+<p>Maintained by Ros Haitovich in matrostik/zana-plugins. Pinned to commit `28455e76db8ba0b1b83c41174043c1e95d6e5e71` (v0.2.0), including compiled `server.mjs` and `app.js` artifacts. Installed plugins run as full-trust code in Zana’s server process.</p>
+  </article>
+  <aside class="facts">
+    <dl>
+      <dt>Plugin id</dt><dd><code>draft-studio</code></dd>
+      <dt>Author</dt><dd><a href="https://github.com/matrostik">Ros Haitovich</a></dd>
+      <dt>Category</dt><dd>Productivity</dd>
+      <dt>Source</dt><dd class="break"><a href="https://github.com/matrostik/zana-plugins">github.com/matrostik/zana-plugins/plugins/draft-studio@28455e76db8ba0b1b83c41174043c1e95d6e5e71</a></dd>
+      <dt>Tags</dt><dd><ul class="tags"><li>voice</li><li>dictation</li><li>writing</li><li>whisper</li><li>translation</li><li>productivity</li></ul></dd>
+    </dl>
+  </aside>
+</div>
+
+<section class="section">
+  <div class="section-head"><div><h2>More in Productivity <span class="count">1</span></h2></div><a class="view-all" href="../?category=productivity">View all</a></div>
+  <div class="grid"><a class="card" href="../office-viewer/" data-search="office-viewer office viewer preview word, excel and powerpoint content beside a zana thread, then quote a section into your draft. productivity office documents docx xlsx pptx preview" data-category="productivity" data-name="office viewer" data-added="2026-11-15" data-featured="0">
+  <div class="card-head"><span class="avatar" style="--hue:3" aria-hidden="true">O</span><h3>Office Viewer</h3></div>
+  <p class="card-desc">Preview Word, Excel and PowerPoint content beside a Zana thread, then quote a section into your draft.</p>
+  <div class="card-foot"><span class="author"><span class="author-dot">G</span>grebmann1</span><span>Productivity</span></div>
+</a></div>
+</section>
+</main>
+<footer class="wrap footer">
+  <span>Public plugins built by the Zana community.</span>
+  <span><a href="../publish/">Publish a plugin</a> · <a href="https://github.com/salesforce/zana-marketplace">Repository</a> · <a href="https://github.com/salesforce/zana-marketplace/blob/main/marketplace.json">marketplace.json</a></span>
+</footer>
+<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+<script src="../assets/site.js"></script>
+</body>
+</html>
